@@ -1,33 +1,104 @@
 body {
     width: 100%;
     height: 100vh;
+    background-color: rgb(149, 216, 230);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 #container {
-    border: 2px solid black;
-    width: 60%;
-    height: 60%;
+    border: 2px solid rgb(240, 154, 248);
+    background-color: rgb(252, 184, 225);
+    box-shadow: 0px 10px 15px 10px rgba(0, 0,0 , 0.3);
+    width: 80%;
+    height: 100%;
+    padding: 20px;
     display: flex;
     flex-wrap: wrap;
-    align-content: flex-start;
-    gap: 10px;
+    align-content: center;
+    text-align: center ;
+    overflow-y: scroll;
+
 
 }
 .addNoteDiv {
-    border: 2px solid red;          
-    width: 100px;
-    height: 100px;
+    border: 2px solid black;    
+    background-color: rgb(245, 132, 200);   
+    box-shadow: 0px 10px 15px 10px rgba(0, 0,0 , 0.2); 
+    border-radius: 10px; 
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    text-align:center;
+    
+}
+.addNoteDiv:hover{
+    transition: 0.25s;
+    background-color: #c3b6b6;
 }
 #popupContainer {
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
     transform: translate(-50%,-50%);
     padding: 10px;
-    border: 2px solid blue;
-    background-color: lightblue;
+    text-align: center;
+    border: 2px solid black;
+    background-color: rgb(149, 216, 230);
+    flex-direction: column;
+    align-items: center;
+}
+textarea {
+
+    width: 250px;
+    height: 100px;
+    margin: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: rgb(253, 253, 253);
+
 }
 .note {
-    border: 2px solid rgb(160, 44, 139);          
-    width: 100px;
-    height: 100px;
+    border: 2px solid rgb(189, 186, 3); 
+    border-radius: 10px;
+    background-color: rgb(244, 242, 157); 
+    box-shadow: 0px 10px 15px 10px rgba(0, 0,0 , 0.2);        
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    cursor: pointer;
+    text-align:flex;
+    overflow-y: scroll;
+}
+#editBtn, #deleteBtn,#submitBtn,#closeBtn 
+{
+    background-color: #b997ff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    width: 80px;
+    height: 40px;
+}
+#editBtn,#submitBtn {
+    background-color: rgb(229, 153, 252);
+}
+#editBtn:hover,#submitBtn:hover {
+    background-color: #cd70fc;
+}
+#deleteBtn:hover,#closeBtn:hover{
+    background-color: #885ae3;
 }
